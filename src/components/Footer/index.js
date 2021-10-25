@@ -6,6 +6,7 @@ export function Footer() {
     <S.ContainerFooter>
         <h1>Estou no Footer</h1>
         <h2> Teste </h2>
+        <h3> teste h3</h3>
     </S.ContainerFooter>
     );
 }   
