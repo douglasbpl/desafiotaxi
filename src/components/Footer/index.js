@@ -8,7 +8,7 @@ export function Footer() {
   const data = useStaticQuery(graphql`  
   query {
 alldata{
-footers {
+  footers {
     address
     paragraph
     links
@@ -36,15 +36,16 @@ footers {
     newsletter
     email
     buttom
-   ins
+    ins
     fc
     lk
     yu
     tw
   }
-}
-}
 
+
+  }
+}
   
   `  )
 
