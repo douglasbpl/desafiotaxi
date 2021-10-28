@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 export function Footer() {
 
-const data = useStaticQuery(graphql`  
+  const data = useStaticQuery(graphql`  
   query {
 alldata{
 footers {
@@ -36,6 +36,11 @@ footers {
     newsletter
     email
     buttom
+   ins
+    fc
+    lk
+    yu
+    tw
   }
 }
 }
@@ -44,7 +49,7 @@ footers {
   `  )
 
 
-const { address, paragraph, links, home, about, taxi, booking, contact, follow, facebook, twitter, linkedin, youtube, instagram, newsletter, email, buttom } = data.alldata.footers[0]
+  const { ins, fc, lk, yu, tw, address, paragraph, links, home, about, taxi, booking, contact, follow, facebook, twitter, linkedin, youtube, instagram, newsletter, email, buttom } = data.alldata.footers[0]
 
 
   return (
@@ -54,7 +59,7 @@ const { address, paragraph, links, home, about, taxi, booking, contact, follow, 
 
       <S.BoxAddress>
         <h1> {address} </h1>
-<p>{paragraph}</p>
+        <p>{paragraph}</p>
       </S.BoxAddress>
 
 
@@ -72,12 +77,25 @@ const { address, paragraph, links, home, about, taxi, booking, contact, follow, 
 
       <S.BoxFollow>
         <h1> {follow} </h1>
-        
-        <img src={facebook.url} alt="instagran"/>
-        <img src={twitter.url}  alt="Twitter" />
-        <img src= {linkedin.url}alt="Linkedin" />
-        <img src={youtube.url} alt="Youtube" />
-        <img src={instagram.url} alt="Instagram" />
+        <S.BoxImg>
+          <img src={facebook.url} alt="instagran" />
+          <img src={twitter.url} alt="Twitter" />
+          <img src={linkedin.url} alt="Linkedin" />
+          <img src={youtube.url} alt="Youtube" />
+          <img src={instagram.url} alt="Instagram" />
+        </S.BoxImg>
+
+
+        <S.BoxParagraphs>
+
+          <p> {fc} </p>
+          <p>{tw} </p>
+          <p> {lk} </p>
+          <p> {yu} </p>
+          <p> {ins} </p>
+
+        </S.BoxParagraphs>
+
       </S.BoxFollow>
 
 
