@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import * as S from "./styled";
 import SimpleSlider from "./slider.js";
 
@@ -11,33 +11,28 @@ export function Header () {
   const data = useStaticQuery(graphql`
   query {
     alldata {
-        headers {
-          logoheader {
-            id
-            url
-          }
-          homebt
-          taxibt
-          bookingbt
-          contactusbt
-          namecarheader
-          numbercarheader
-          ttlcar
-          paragraphcar
-          btsearch
+      headers {
+        logoheader {
+          id
+          url
         }
+        homebt
+        taxibt
+        bookingbt
+        contactusbt        
+      }
       }
     }
     `)
     
-  const { logoheader, homebt, taxibt, bookingbt, contactusbt,
-     namecarheader,numbercarheader,ttlcar,paragraphcar,btsearch} = data.alldata.headers[0] ;
+  const { logoheader, homebt, taxibt, bookingbt, contactusbt} = data.alldata.headers[0] ;
   
   return (
-    <S.ContainerHeader>
-        <div>
-          <div>
-            <img src={logoheader.url}/>
+    <S.ContainerHeader>        
+          <S.BoxTopHeader>
+            <figure>
+            <S.Logo src={logoheader.url}/>
+            </figure>
             <S.Menu>
               <ul>
                 <a href="#"><li>{homebt}</li></a>
@@ -46,21 +41,10 @@ export function Header () {
                 <a href="#"><li>{contactusbt}</li></a>
               </ul>
             </S.Menu>
-          </div>
-          <div>
-            <SimpleSlider/>
-            <div>
-              <h2>{ttlcar}</h2>
-              <div>
-                <p>{paragraphcar}</p>
-                <input placeholder="PICKUP"/>
-                <input placeholder="DROP" />
-                <input placeholder="WHEN"/>
-                <button>{btsearch}</button>
-              </div>
-            </div>
-          </div>
-        </div>                 
+          </S.BoxTopHeader>
+          <S.ContainerSlider>
+            <SimpleSlider/>            
+          </S.ContainerSlider>                            
     </S.ContainerHeader>
   );
 }   
