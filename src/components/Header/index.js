@@ -1,8 +1,6 @@
 import React from "react";
 import * as S from "./styled";
 import SimpleSlider from "./slider.js";
-
-
 import { graphql, useStaticQuery } from 'gatsby'
 
 

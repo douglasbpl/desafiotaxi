@@ -6,6 +6,8 @@ import ThirdSection from "./thirdsection";
 
 export function Main() {
   return (
+
+ 
     <S.ContainerMain>
       <S.Divide></S.Divide>
       <FirstSection />
@@ -15,3 +17,4 @@ export function Main() {
     </S.ContainerMain>
   );
 }
+

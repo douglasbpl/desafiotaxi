@@ -7,8 +7,8 @@ export function Footer() {
 
   const data = useStaticQuery(graphql`  
   query {
-alldata{
-  footers {
+    alldata{
+    footers {
     address
     paragraph
     links
@@ -38,26 +38,26 @@ alldata{
     buttom
     ins
     fc
+    tw
     lk
     yu
-    tw
-  }
-
-
+    paragraphfooter
   }
 }
+  }
   
   `  )
 
 
-  const { ins, fc, lk, yu, tw, address, paragraph, links, home, about, taxi, booking, contact, follow, facebook, twitter, linkedin, youtube, instagram, newsletter, email, buttom } = data.alldata.footers[0]
-
+  const { address, paragraph, links, home, about, taxi, booking, contact, follow, facebook, twitter, linkedin, youtube, instagram, newsletter, email, buttom, ins, fc, tw, lk, yu, paragraphfooter } = data.alldata.footers[0]
 
   return (
 
-
     <S.Container>
 
+
+
+<S.Everything> 
       <S.BoxAddress>
         <h1> {address} </h1>
         <p>{paragraph}</p>
@@ -65,7 +65,8 @@ alldata{
 
 
       <S.BoxLinks>
-        <h1> {links} </h1>
+        <h1>{links} </h1>
+
         <ul>
           <li>{home} </li>
           <li> {about}</li>
@@ -76,38 +77,56 @@ alldata{
       </S.BoxLinks>
 
 
+
+
       <S.BoxFollow>
-        <h1> {follow} </h1>
+    
+<h1> {follow} </h1>
+
         <S.BoxImg>
-          <img src={facebook.url} alt="instagran" />
-          <img src={twitter.url} alt="Twitter" />
-          <img src={linkedin.url} alt="Linkedin" />
-          <img src={youtube.url} alt="Youtube" />
-          <img src={instagram.url} alt="Instagram" />
+
+          <S.Facebook>
+            <img src={facebook.url} alt="instagran" />
+            <p> {fc} </p>
+          </S.Facebook>
+
+          <S.Twitter>
+            <img src={twitter.url} alt="Twitter" />
+            <p> {tw} </p>
+          </S.Twitter>
+
+          <S.Linkedin>
+            <img src={linkedin.url} alt="Linkedin" />
+            <p> {lk} </p>
+          </S.Linkedin>
+
+          <S.Youtube>
+            <img src={youtube.url} alt="Youtube" />
+            <p> {yu} </p>
+          </S.Youtube>
+
+          <S.Instagram>
+            <img src={instagram.url} alt="Instagram" />
+            <p> {ins} </p>
+          </S.Instagram>
+
+
         </S.BoxImg>
-
-
-        <S.BoxParagraphs>
-
-          <p> {fc} </p>
-          <p>{tw} </p>
-          <p> {lk} </p>
-          <p> {yu} </p>
-          <p> {ins} </p>
-
-        </S.BoxParagraphs>
 
       </S.BoxFollow>
 
 
       <S.BoxNewsletter>
-        <h1> {newsletter} </h1>
-
+        <h1>{newsletter}</h1>
+<S.InputButton>
         <input refs="email" type="text" size="20" placeholder="Enter Your Email" />
-        <p> {email} </p>
-        <button> {buttom} </button>
+       
+      <button> {buttom} </button>
+        </S.InputButton>
+
       </S.BoxNewsletter>
 
+      </S.Everything>
 
     </S.Container>
   );

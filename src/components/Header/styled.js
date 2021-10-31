@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 
 export const ContainerHeader = styled.div`
+
 width: 100%;
 background-color: #1a1a1a;
 display: flex;
@@ -159,5 +160,3 @@ button {
     color: #000;   
  }   
 `
-
-

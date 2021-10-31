@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-
-
 export const ContainerMain = styled.div`
 `
 export const Divide = styled.div`
@@ -200,4 +198,5 @@ img > {
 
 
 `
+
 
