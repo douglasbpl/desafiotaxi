@@ -10,8 +10,7 @@ export default function ThirdSection() {
     </S.TextAPP>     
     <S.Telephone>
     <img src="https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/rzmDBnpGSDCKhFVCfwOo" alt="Telephone Image"/>
-    </S.Telephone>
-              
+    </S.Telephone>              
 
     </S.ContainerThirdSection>
     );
