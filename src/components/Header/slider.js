@@ -13,7 +13,7 @@ export default function SimpleSlider() {
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 2,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 1800,
     pauseOnHover: true,
     focusOnSelect: false,
@@ -46,58 +46,58 @@ export default function SimpleSlider() {
 
 
   return (
-          <Slider {...settings}>
-        <S.ContainerCar>
-          <S.BoxTxtCar>
-            <S.NameCarHeader>{namecarheader}</S.NameCarHeader>
-            <S.ParaCarHeader>{numbercarheader}</S.ParaCarHeader>
-          </S.BoxTxtCar>
-                    <S.ImgCar src={xadrezcar.url} alt="carro america taxi" />
-                 </S.ContainerCar>
-        <S.ContainerSearch>
-          <S.TtlCarHeader>{ttlcar}</S.TtlCarHeader>
-          <S.BoxSearch>
-            <p>{paragraphcar}</p>
-            <input placeholder="PICKUP" />
-            <input placeholder="DROP" />
-            <input placeholder="WHEN" />
-            <button>{btsearch}</button>
-          </S.BoxSearch>
-        </S.ContainerSearch>
-        <S.ContainerCar>
-          <S.BoxTxtCar>
-            <S.NameCarHeader>{namecarheader}</S.NameCarHeader>
-            <S.ParaCarHeader>{numbercarheader}</S.ParaCarHeader>
-          </S.BoxTxtCar>
-                    <S.ImgCar src={xadrezcar.url} alt="carro america taxi" />
-                  </S.ContainerCar>
-        <S.ContainerSearch>
-          <S.TtlCarHeader>{ttlcar}</S.TtlCarHeader>
-          <S.BoxSearch>
-            <p>{paragraphcar}</p>
-            <input placeholder="PICKUP" />
-            <input placeholder="DROP" />
-            <input placeholder="WHEN" />
-            <button>{btsearch}</button>
-          </S.BoxSearch>
-        </S.ContainerSearch>
-        <S.ContainerCar>
-          <S.BoxTxtCar>
-            <S.NameCarHeader>{namecarheader}</S.NameCarHeader>
-            <S.ParaCarHeader>{numbercarheader}</S.ParaCarHeader>
-          </S.BoxTxtCar>          
-          <S.ImgCar src={americataxicar.url} alt="carro america taxi" />
-                 </S.ContainerCar>
-        <S.ContainerSearch>
-          <S.TtlCarHeader>{ttlcar}</S.TtlCarHeader>
-          <S.BoxSearch>
-            <p>{paragraphcar}</p>
-            <input type="text" placeholder="PICKUP"></input>
-            <input  type="text" placeholder="DROP"></input>
-            <input type="text" placeholder="WHEN"></input>
-            <button>{btsearch}</button>
-          </S.BoxSearch>
-        </S.ContainerSearch>
-      </Slider>    
+    <Slider {...settings}>
+      <S.ContainerCar>
+        <S.BoxTxtCar>
+          <S.NameCarHeader>{namecarheader}</S.NameCarHeader>
+          <S.ParaCarHeader>{numbercarheader}</S.ParaCarHeader>
+        </S.BoxTxtCar>
+        <S.ImgCar src={xadrezcar.url} alt="carro america taxi" />
+      </S.ContainerCar>
+      <S.ContainerSearch>
+        <S.TtlCarHeader>{ttlcar}</S.TtlCarHeader>
+        <S.BoxSearch>
+          <p>{paragraphcar}</p>
+          <input placeholder="PICKUP" />
+          <input placeholder="DROP" />
+          <input placeholder="WHEN" />
+          <button>{btsearch}</button>
+        </S.BoxSearch>
+      </S.ContainerSearch>
+      <S.ContainerCar>
+        <S.BoxTxtCar>
+          <S.NameCarHeader>{namecarheader}</S.NameCarHeader>
+          <S.ParaCarHeader>{numbercarheader}</S.ParaCarHeader>
+        </S.BoxTxtCar>
+        <S.ImgCar src={xadrezcar.url} alt="carro america taxi" />
+      </S.ContainerCar>
+      <S.ContainerSearch>
+        <S.TtlCarHeader>{ttlcar}</S.TtlCarHeader>
+        <S.BoxSearch>
+          <p>{paragraphcar}</p>
+          <input placeholder="PICKUP" />
+          <input placeholder="DROP" />
+          <input placeholder="WHEN" />
+          <button>{btsearch}</button>
+        </S.BoxSearch>
+      </S.ContainerSearch>
+      <S.ContainerCar>
+        <S.BoxTxtCar>
+          <S.NameCarHeader>{namecarheader}</S.NameCarHeader>
+          <S.ParaCarHeader>{numbercarheader}</S.ParaCarHeader>
+        </S.BoxTxtCar>
+        <S.ImgCar src={americataxicar.url} alt="carro america taxi" />
+      </S.ContainerCar>
+      <S.ContainerSearch>
+        <S.TtlCarHeader>{ttlcar}</S.TtlCarHeader>
+        <S.BoxSearch>
+          <p>{paragraphcar}</p>
+          <input type="text" placeholder="PICKUP"></input>
+          <input type="text" placeholder="DROP"></input>
+          <input type="text" placeholder="WHEN"></input>
+          <button>{btsearch}</button>
+        </S.BoxSearch>
+      </S.ContainerSearch>
+    </Slider>
   );
 }

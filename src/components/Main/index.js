@@ -1,9 +1,17 @@
-import React from "react"; import * as S from "./styled";
+import React from "react";
+import * as S from "./styled";
+import FirstSection from "./firstsection";
+import SecondSection from "./secondsection";
+import ThirdSection from "./thirdsection";
 
 export function Main() {
   return (
     <S.ContainerMain>
-        <h1>Estou na Main</h1>
+      <S.Divide></S.Divide>
+      <FirstSection />
+      <SecondSection />
+      <ThirdSection />
+      <S.Divide></S.Divide>
     </S.ContainerMain>
-    );
-   }   
+  );
+}

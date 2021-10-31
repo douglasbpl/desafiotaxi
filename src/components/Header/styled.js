@@ -48,9 +48,18 @@ export const ContainerSlider = styled.div`
 display:flex;
 flex-direction:column;
 justify-content:center;
-width:96%;
+width:80%;
 background-color: #1a1a1a;
-`
+cursor: move; /* fallback if grab cursor is unsupported */
+cursor: grab;
+cursor: -moz-grab;
+cursor: -webkit-grab;
+:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+
+}`
 
 export const ContainerCar = styled.div`
 flex-direction:column;
@@ -61,7 +70,8 @@ width:100%;
 
 export const BoxTxtCar = styled.div`
 background-color:#f8ca11;
-width:70%;
+width:85%;
+height:50px;
 display:flex;
 height:20vh;
 float:right;

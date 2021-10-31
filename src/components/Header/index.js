@@ -6,7 +6,7 @@ import SimpleSlider from "./slider.js";
 import { graphql, useStaticQuery } from 'gatsby'
 
 
-export function Header () {
+export function Header() {
 
   const data = useStaticQuery(graphql`
   query {
@@ -24,27 +24,27 @@ export function Header () {
       }
     }
     `)
-    
-  const { logoheader, homebt, taxibt, bookingbt, contactusbt} = data.alldata.headers[0] ;
-  
+
+  const { logoheader, homebt, taxibt, bookingbt, contactusbt } = data.alldata.headers[0];
+
   return (
-    <S.ContainerHeader>        
-          <S.BoxTopHeader>
-            <figure>
-            <S.Logo src={logoheader.url}/>
-            </figure>
-            <S.Menu>
-              <ul>
-                <a href="#"><li>{homebt}</li></a>
-                <a href="#"><li>{taxibt}</li></a>
-                <a href="#"><li>{bookingbt}</li></a>
-                <a href="#"><li>{contactusbt}</li></a>
-              </ul>
-            </S.Menu>
-          </S.BoxTopHeader>
-          <S.ContainerSlider>
-            <SimpleSlider/>            
-          </S.ContainerSlider>                            
+    <S.ContainerHeader>
+      <S.BoxTopHeader>
+        <figure>
+          <S.Logo src={logoheader.url} />
+        </figure>
+        <S.Menu>
+          <ul>
+            <a href="#"><li>{homebt}</li></a>
+            <a href="#"><li>{taxibt}</li></a>
+            <a href="#"><li>{bookingbt}</li></a>
+            <a href="#"><li>{contactusbt}</li></a>
+          </ul>
+        </S.Menu>
+      </S.BoxTopHeader>
+      <S.ContainerSlider>
+        <SimpleSlider />
+      </S.ContainerSlider>
     </S.ContainerHeader>
   );
-}   
+}
