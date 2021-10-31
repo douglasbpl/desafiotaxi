@@ -29,6 +29,7 @@ export function Header() {
 
   return (
     <S.ContainerHeader>
+ master
       <S.BoxTopHeader>
         <figure>
           <S.Logo src={logoheader.url} />
@@ -45,6 +46,10 @@ export function Header() {
       <S.ContainerSlider>
         <SimpleSlider />
       </S.ContainerSlider>
+
+        <h1>Estou na Header</h1>
+        <h2>OI</h2>
+master
     </S.ContainerHeader>
   );
 }

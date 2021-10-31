@@ -15,4 +15,8 @@ module.exports = {
       },
     },
   ]
+ master
   }
+=======
+};
+ master
