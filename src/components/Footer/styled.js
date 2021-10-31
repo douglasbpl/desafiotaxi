@@ -111,6 +111,8 @@ h1{
 
 
 export const InputButton = styled.div `
+display: flex;
+flex-direction: column;
 
 h1{
    color: #FFFFF;
@@ -118,21 +120,22 @@ h1{
 }
 
 input{
+    width: 15vw;
     height: 5vh;
+    
 }
 
 button{
 width: 10vw;
-    height: 5vh;
+    height: 7vh;
     background-color: gold;
     cursor: pointer;
-     &:hover {
-            color:#FFC125;
-        }
-}
+    color: #FFFAFA;
+font-size: 3vh;
+font-weight: bold;
 `
 
-export const Tudo = styled.div`
+export const Everything = styled.div`
 heigth: 60vh;
 display: flex;
 justify-content: space-around;

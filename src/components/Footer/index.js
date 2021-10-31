@@ -57,7 +57,7 @@ export function Footer() {
 
 
 
-<S.Tudo> 
+<S.Everything> 
       <S.BoxAddress>
         <h1> {address} </h1>
         <p>{paragraph}</p>
@@ -120,13 +120,13 @@ export function Footer() {
         <h1>{newsletter}</h1>
 <S.InputButton>
         <input refs="email" type="text" size="20" placeholder="Enter Your Email" />
-        <p> {email} </p>
-        <button> {buttom} </button>
+       
+      <button> {buttom} </button>
         </S.InputButton>
 
       </S.BoxNewsletter>
 
-      </S.Tudo>
+      </S.Everything>
 
     </S.Container>
   );
