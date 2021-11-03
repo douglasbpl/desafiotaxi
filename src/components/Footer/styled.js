@@ -93,13 +93,17 @@ li{
     flex-direction: row;
     cursor: pointer;
 }
-    li:hover{
-        color: yellow;
-}
+
+
 li > a {
     color:white;
   text-decoration:none;
 }
+
+ li > a:hover {
+    color: yellow;
+}
+
 
 
 span{
