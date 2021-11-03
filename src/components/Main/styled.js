@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 export const ContainerMain = styled.div`
 `
 export const Divide = styled.div`
@@ -83,6 +84,7 @@ width:100%;
 export const TittleSecoSection = styled.h2`
 text-align:center;
 font-size:50px;
+padding-top:50px;
 `
 export const SpUloax = styled.span`
 color:#f4db31;
@@ -100,7 +102,7 @@ display:flex;
 width:50%;
 justify-content:center;
 &:hover{
-transform: scale(1.3);
+transform: scale(1.2);
 transition: all 0.1s ease 0s;
 } 
 @media (min-width: 768px) {
@@ -151,7 +153,7 @@ justify-content:center;
     width:80%;
 }
 &:hover{
-    transform: scale(1.3);
+    transform: scale(1.2);
 transition: all 0.1s ease 0s;
 }
 

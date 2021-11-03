@@ -7,7 +7,6 @@ import ThirdSection from "./thirdsection";
 import { graphql, useStaticQuery } from 'gatsby'
 
 export function Main() {
-
 const data = useStaticQuery(graphql`
   query {
     alldata {

@@ -38,10 +38,10 @@ export default function SecondSection() {
 
 
   return (
-    <S.ContainerSecoSection>
-      <S.TittleSecoSection>{whyride} <S.SpUloax>{withuloax}</S.SpUloax> </S.TittleSecoSection>
-      {/* <S.ContainerIntoSection> */}
-        <S.IntoSectionleft>
+    <div id="SecondSection">
+    <S.ContainerSecoSection >
+      <S.TittleSecoSection >{whyride} <S.SpUloax>{withuloax}</S.SpUloax> </S.TittleSecoSection>
+             <S.IntoSectionleft>
         <figure><img src={imgboxonewallet.url} alt="Wallet image"/></figure>
         <div>
           <h2>{titleboxoneandthree}</h2>
@@ -76,8 +76,8 @@ export default function SecondSection() {
         </div>
         <figure><img src={imgboxthereeandfourtaxi.url} alt="Secure and Safer Rides image"/></figure>                
       </S.IntoSectionRight>
-      {/* </S.ContainerIntoSection> */}
-            
+                  
     </S.ContainerSecoSection>
+    </div>
   );
 }

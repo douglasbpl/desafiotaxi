@@ -56,6 +56,10 @@ li{
         color: yellow;
 }
 
+ul >  a {
+    text-decoration:none;
+    color: #fefefe;
+
 span{
     width: 1.3vw;    
 }
@@ -92,6 +96,11 @@ li{
     li:hover{
         color: yellow;
 }
+li > a {
+    color:white;
+  text-decoration:none;
+}
+
 
 span{
     width: 1.3vw;    
@@ -135,7 +144,7 @@ input{
 
 button{
 height: 7vh;
-witdh: 10vw;
+width: 10vw;
 background-color: gold;
 cursor: pointer;
 color: #FFFAFA;

@@ -28,7 +28,7 @@ export default function ThirdSection() {
 
   
   return (
-    <S.ContainerThirdSection background = {background.url}>   
+    <S.ContainerThirdSection id="ThirdSection" background = {background.url}>   
     
     <S.TextAPP>
       <h2>{titledownload}</h2>

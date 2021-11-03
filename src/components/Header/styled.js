@@ -11,7 +11,7 @@ align-items: center;
 
 export const BoxTopHeader = styled.div`
 width: 100%;
-height: 10vh;    
+height: 8vh;    
 display: flex;
 justify-content: center;
 align-items: center;

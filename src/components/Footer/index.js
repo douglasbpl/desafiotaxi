@@ -56,7 +56,7 @@ export function Footer() {
 
   return (
 
-    <S.Container>
+    <S.Container id="Contact Us">
 
       <S.BoxSectionOneF>
 
@@ -72,11 +72,11 @@ export function Footer() {
             <ul>
 
 
-              <li> <span> <img src={limarcador.url} /> </span> {home} </li>
-              <li> <span> <img src={limarcador.url} /> </span> {about}</li>
-              <li> <span> <img src={limarcador.url} /> </span> {taxi} </li>
-              <li> <span> <img src={limarcador.url} /> </span> {booking} </li>
-              <li> <span> <img src={limarcador.url} /> </span> {contact} </li>
+            <a href="#home"><li> <span> <img src={limarcador.url} /></span> {home} </li></a>
+            <a href="#"><li> <span> <img src={limarcador.url} /> </span> {about}</li></a>
+            <a href="#FirstSection"><li> <span> <img src={limarcador.url} /> </span> {taxi} </li></a>
+              <a href="#SecondSection"><li> <span> <img src={limarcador.url} /> </span> {booking} </li></a>
+              <a href="#Contact Us"><li> <span> <img src={limarcador.url} /> </span> {contact} </li></a>
             </ul>
           </S.BoxLinks>
 
@@ -84,13 +84,15 @@ export function Footer() {
           <S.BoxFollow>
 
           <div><h1> {follow} </h1></div>
-            <ul>
-              <li> <span> <img src={facebook.url} /> </span> {fc} </li>
-              <li> <span> <img src={twitter.url} /> </span> {tw} </li>
-              <li> <span> <img src={linkedin.url} /> </span> {lk} </li>
-              <li> <span> <img src={youtube.url} /> </span> {yu} </li>
-              <li> <span> <img src={instagram.url} /> </span> {ins} </li>
-            </ul>
+          <ul>
+
+<li> <span> <img src={facebook.url} /> </span> <a href="https://www.facebook.com/" target="_blank"> {fc} </a> </li>
+<li> <span> <img src={twitter.url} /> </span> <a href="https://twitter.com/" target="_blank"> {tw} </a> </li>
+<li> <span> <img src={linkedin.url} /> </span> <a href="https://www.linkedin.com/feed/" target="_blank"> {lk} </a> </li>
+<li> <span> <img src={youtube.url} /> </span> <a href="https://www.youtube.com/" target="_blank"> {yu} </a> </li>
+<li> <span> <img src={instagram.url} /> </span> <a href="https://www.instagram.com/" target="_blank"> {ins} </a> </li>
+
+</ul>
 
           </S.BoxFollow>
 
