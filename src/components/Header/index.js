@@ -12,42 +12,38 @@ export function Header() {
       headers {
         logoheader {
           id
-          url
+          url          
         }
         homebt
         taxibt
         bookingbt
-        contactusbt        
-      }
+        contactubt        
       }
     }
+  }
     `)
 
-  const { logoheader, homebt, taxibt, bookingbt, contactusbt } = data.alldata.headers[0];
+  const { logoheader, homebt, taxibt, bookingbt, contactubt } = data.alldata.headers[0];
 
   return (
     <S.ContainerHeader>
 
       <S.BoxTopHeader>
-        <figure>
-          <S.Logo src={logoheader.url} />
-        </figure>
+        <S.Logo >
+          <img src={logoheader.url} />
+        </S.Logo>
         <S.Menu>
           <ul>
             <a href="#"><li>{homebt}</li></a>
             <a href="#"><li>{taxibt}</li></a>
             <a href="#"><li>{bookingbt}</li></a>
-            <a href="#"><li>{contactusbt}</li></a>
+            <a href="#"><li>{contactubt}</li></a>
           </ul>
         </S.Menu>
       </S.BoxTopHeader>
       <S.ContainerSlider>
         <SimpleSlider />
-      </S.ContainerSlider>
-
-        <h1>Estou na Header</h1>
-        <h2>OI</h2>
-
+      </S.ContainerSlider>        
     </S.ContainerHeader>
   );
 }

@@ -1,34 +1,97 @@
 import React from "react";
 import * as S from "./styled";
 
+import { graphql, useStaticQuery } from 'gatsby'
+
 export default function FirstSection() {
+
+const data = useStaticQuery(graphql`
+  query {
+    alldata {
+        mains {
+            our
+            taxi
+            ballone
+            carone
+            balltwo
+            cartwo
+            carthree
+            ballthree
+            paragraphcar
+            imgthreecars {
+              id
+              url
+            }
+            whyride
+            withuloax
+            btnbooknow
+            paragraphboxmain
+            titleboxoneandthree
+            titleboxtwoandfour
+            imgboxonewallet {
+              id
+              url
+            }
+            imgboxtwogirl {
+              id
+              url
+            }
+            imgboxthereeandfourtaxi {
+              id
+              url
+            }
+            titledownload
+            paragraphourapp
+            imgmobile {
+              id
+              url
+            }
+            background {
+              id
+              url
+            }
+          }
+      
+    }
+  }
+    `)
+
+    const { our, taxi, ballone, carone, balltwo ,cartwo ,ballthree , carthree,paragraphcar ,imgthreecars} = data.alldata.mains[0];
+
+
+
     return (
         <S.ContainerFiSection>
-            <S.TitleOur>Our <S.Taxi>Taxi</S.Taxi></S.TitleOur>
+            <S.TitleOur> {our} <S.Taxi>{taxi}</S.Taxi></S.TitleOur>
             <S.ContainerBoxCard>
                 <div>
-                    <h3>CAR 1</h3>
-                    <p>act that a reader will be distracted</p>
+                  <div><p>{ballone}</p></div>
+                    <h3>{carone}</h3>
+                    <p>{paragraphcar}</p>
                     <figure>
-                        <img src="https://uloax-template.netlify.app/images/img-2.png" alt="car image"/>
+                        <img src={imgthreecars.url} alt="car image"/>
                     </figure>
                 </div>
 
                 <div>
-                    <h3>CAR 2</h3>
-                    <p>act that a reader will be distracted</p>
+                <div><p>{balltwo}</p></div>
+                    <h3>{cartwo}</h3>
+                    <p>{paragraphcar}</p>
                     <figure>
-                        <img src="https://uloax-template.netlify.app/images/img-2.png" alt="car image"/>
+                        <img src={imgthreecars.url} alt="car image"/>
                     </figure>
                 </div>
 
                 <div>
-                    <h3>CAR 3</h3>
-                    <p>act that a reader will be distracted</p>
+                <div><p>{ballthree}</p></div>
+                    <h3>{carthree}</h3>
+                    <p>{paragraphcar}</p>
                     <figure>
-                        <img src="https://uloax-template.netlify.app/images/img-2.png" alt="car image"/>
+                        <img src={imgthreecars.url} alt="car image"/>
                     </figure>
                 </div>
+
+                
             </S.ContainerBoxCard>
         </S.ContainerFiSection>
     );

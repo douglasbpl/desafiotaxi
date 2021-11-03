@@ -13,7 +13,7 @@ export default function SimpleSlider() {
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 2,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 1800,
     pauseOnHover: true,
     focusOnSelect: false,
@@ -64,6 +64,7 @@ export default function SimpleSlider() {
           <button>{btsearch}</button>
         </S.BoxSearch>
       </S.ContainerSearch>
+
       <S.ContainerCar>
         <S.BoxTxtCar>
           <S.NameCarHeader>{namecarheader}</S.NameCarHeader>
@@ -81,6 +82,7 @@ export default function SimpleSlider() {
           <button>{btsearch}</button>
         </S.BoxSearch>
       </S.ContainerSearch>
+
       <S.ContainerCar>
         <S.BoxTxtCar>
           <S.NameCarHeader>{namecarheader}</S.NameCarHeader>
@@ -92,12 +94,13 @@ export default function SimpleSlider() {
         <S.TtlCarHeader>{ttlcar}</S.TtlCarHeader>
         <S.BoxSearch>
           <p>{paragraphcar}</p>
-          <input type="text" placeholder="PICKUP"></input>
-          <input type="text" placeholder="DROP"></input>
-          <input type="text" placeholder="WHEN"></input>
+          <input placeholder="PICKUP" />
+          <input placeholder="DROP" />
+          <input placeholder="WHEN" />
           <button>{btsearch}</button>
         </S.BoxSearch>
       </S.ContainerSearch>
+      
     </Slider>
   );
 }

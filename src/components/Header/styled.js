@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 
 export const ContainerHeader = styled.div`
-
 width: 100%;
 background-color: #1a1a1a;
 display: flex;
@@ -11,18 +10,23 @@ align-items: center;
 `
 
 export const BoxTopHeader = styled.div`
-width:45vw;
-display:flex;
+width: 100%;
+height: 10vh;    
+display: flex;
+justify-content: center;
+align-items: center;
 background-color: #1a1a1a;
-justify-content: space-between;
+position:fixed;
+z-index:1;
 `
 
-export const Logo = styled.img`
+
+export const Logo = styled.figure`
+width: 15%;
 `
 
 export const Menu = styled.menu`
-display:flex;
-width: 57%;
+width: 30%;
 justify-content:space-around;
 align-items:center;
 ul {
@@ -46,11 +50,10 @@ ul > a > li:hover {
 
 
 export const ContainerSlider = styled.div`
+padding-top:10vh;
 display:flex;
 flex-direction:column;
-justify-content:center;
-width:80%;
-background-color: #1a1a1a;
+width:95.6%;
 cursor: move; /* fallback if grab cursor is unsupported */
 cursor: grab;
 cursor: -moz-grab;
@@ -63,22 +66,17 @@ cursor: -webkit-grab;
 }`
 
 export const ContainerCar = styled.div`
-flex-direction:column;
+width:50%;
 background-color: #1a1a1a;
-height:100%;
-width:100%;
+img{
+    width:80%;
+}    
 `
 
 export const BoxTxtCar = styled.div`
 background-color:#f8ca11;
-width:85%;
-height:50px;
-display:flex;
-height:20vh;
+width:75%;
 float:right;
-flex-direction:column;
-align-items:center;
-justify-content:center;
 `
 
 export const NameCarHeader = styled.h2`
@@ -95,7 +93,6 @@ color: #1a1a1a;
 text-align: center;
 `
 
-
 export const TtlCarHeader = styled.h2``
 
 export const ImgCar = styled.img`
@@ -103,8 +100,6 @@ export const ImgCar = styled.img`
 
 export const ContainerSearch = styled.div`
 display:flex;
-width:100%;
-height:100%;
 flex-direction:column;
 justify-content:center;
 align-items:center;
@@ -120,10 +115,7 @@ h2{
 export const BoxSearch = styled.div`
 display:flex;
 flex-direction:column;
-justify-content:top;
 align-items:center;
-width: 100%;
-height:30vh;
 padding-bottom: 30px;
 background-color: #fefefe;
 margin-top: 20px;

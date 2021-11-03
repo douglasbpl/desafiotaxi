@@ -11,7 +11,7 @@ module.exports = {
       options: {
                 typeName: "alldata",
                 fieldName: "alldata",
-                url: "https://api-us-east-1.graphcms.com/v2/ckv72oyw550hf01xl6o4z2nfk/master",
+                url: "https://api-us-east-1.graphcms.com/v2/ckvgu3guf3giu01z05fc68ium/master",
       },
     },
   ]

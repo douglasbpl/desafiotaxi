@@ -1,17 +1,46 @@
 import React from "react"; 
 import * as S from "./styled";
+import { graphql, useStaticQuery } from 'gatsby'
 
 export default function ThirdSection() {
-  return (
-    <S.ContainerThirdSection>
-    <S.TextAPP>
-      <h2>DOWNLOAD</h2>
-      <p>OUR APP TODAY</p>          
-    </S.TextAPP>     
-    <S.Telephone>
-    <img src="https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/rzmDBnpGSDCKhFVCfwOo" alt="Telephone Image"/>
-    </S.Telephone>              
 
+  const data = useStaticQuery(graphql`
+  query {
+    alldata {
+        mains {
+            titledownload
+            paragraphourapp
+            imgmobile {
+              id
+              url
+            }
+            background {
+              id
+              url
+            }
+          }
+      
+    }
+  }
+    `)
+
+    const { titledownload, paragraphourapp, imgmobile, background  } = data.alldata.mains[0];
+
+  
+  return (
+    <S.ContainerThirdSection background = {background.url}>   
+    
+    <S.TextAPP>
+      <h2>{titledownload}</h2>
+      <p>{paragraphourapp}</p>          
+    </S.TextAPP> 
+      <S.BoxTelTxt>
+      <div></div>
+    <S.Telephone>
+      <img src={imgmobile.url} alt="mobile telephone"/>
+    
+    </S.Telephone>              
+    </S.BoxTelTxt>   
     </S.ContainerThirdSection>
     );
 }   

@@ -1,45 +1,82 @@
 import React from "react";
 import * as S from "./styled";
+import { graphql, useStaticQuery } from 'gatsby'
+
 
 export default function SecondSection() {
+
+  const data = useStaticQuery(graphql`
+  query {
+    alldata {
+        mains {
+            whyride
+            withuloax
+            btnbooknow
+            paragraphboxmain
+            titleboxoneandthree
+            titleboxtwoandfour
+            imgboxonewallet {
+              id
+              url
+            }
+            imgboxtwogirl {
+              id
+              url
+            }
+            imgboxthereeandfourtaxi {
+              id
+              url
+            }            
+          }
+      
+    }
+  }
+    `)
+
+    const { whyride, withuloax, btnbooknow, paragraphboxmain, titleboxoneandthree
+       ,titleboxtwoandfour ,imgboxonewallet , imgboxtwogirl,imgboxthereeandfourtaxi} = data.alldata.mains[0];
+
+
   return (
     <S.ContainerSecoSection>
-      <S.TittleSecoSection>Why Ride <S.SpUloax> With Uloax</S.SpUloax> </S.TittleSecoSection>
-      <S.IntoSectionleft>
-        <figure><img src="https://uloax-template.netlify.app/images/img-3.png" alt="Wallet image"/></figure>
+      <S.TittleSecoSection>{whyride} <S.SpUloax>{withuloax}</S.SpUloax> </S.TittleSecoSection>
+      {/* <S.ContainerIntoSection> */}
+        <S.IntoSectionleft>
+        <figure><img src={imgboxonewallet.url} alt="Wallet image"/></figure>
         <div>
-          <h2>Uloax for Every Pocket</h2>
-          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as It is a long established fact that a reader will be distracted by the readable c</p>
-          <button>BOOK NOW</button>
+          <h2>{titleboxoneandthree}</h2>
+          <p>{paragraphboxmain}</p>
+          <button>{btnbooknow}</button>
         </div>        
       </S.IntoSectionleft>
 
       <S.IntoSectionRight>
         <div>
-          <h2>Secure and Safer Ridest</h2>
-          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as It is a long established fact that a reader will be distracted by the readable c</p>
-          <button>BOOK NOW</button>
+          <h2>{titleboxtwoandfour}</h2>
+          <p>{paragraphboxmain}</p>
+          <button>{btnbooknow}</button>
         </div>
-        <figure><img src="https://uloax-template.netlify.app/images/img-4.png" alt="Secure and Safer Rides image"/></figure>                
+        <figure><img src={imgboxtwogirl.url} alt="Secure and Safer Rides image"/></figure>                
       </S.IntoSectionRight>
 
       <S.IntoSectionleft>
-        <figure><img src="https://uloax-template.netlify.app/images/img-5.png" alt="Wallet image"/></figure>
+        <figure><img src={imgboxthereeandfourtaxi.url}alt="Wallet image"/></figure>
         <div>
-          <h2>Uloax for Every Pocket</h2>
-          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as It is a long established fact that a reader will be distracted by the readable c</p>
-          <button>BOOK NOW</button>
+        <h2>{titleboxoneandthree}</h2>
+          <p>{paragraphboxmain}</p>
+          <button>{btnbooknow}</button>
         </div>        
       </S.IntoSectionleft>
 
       <S.IntoSectionRight>
         <div>
-          <h2>Secure and Safer Ridest</h2>
-          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as It is a long established fact that a reader will be distracted by the readable c</p>
-          <button>BOOK NOW</button>
+        <h2>{titleboxtwoandfour}</h2>
+          <p>{paragraphboxmain}</p>
+          <button>{btnbooknow}</button>
         </div>
-        <figure><img src="https://uloax-template.netlify.app/images/img-5.png" alt="Secure and Safer Rides image"/></figure>                
+        <figure><img src={imgboxthereeandfourtaxi.url} alt="Secure and Safer Rides image"/></figure>                
       </S.IntoSectionRight>
+      {/* </S.ContainerIntoSection> */}
             
     </S.ContainerSecoSection>
   );
