@@ -148,7 +148,6 @@ input{
 
 button{
 height: 7vh;
-width: 10vw;
 background-color: gold;
 cursor: pointer;
 color: #FFFAFA;
